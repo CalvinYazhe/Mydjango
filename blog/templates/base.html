@@ -1,0 +1,26 @@
+<html>
+      <style type="text/css">
+        body{background:#BEBEBE;padding:0 5em;margin:0}
+        h2 {margin-bottom:0;font-size:18px;}
+        p{margin:1em 0}
+        div#menu {background-color:#AAAAFF;height:200px;width:150px;float:left;}
+        div#header {background-color:#99bbbb;}
+        li {list-style:none;}
+        ul {margin:0;}
+      </style>
+     
+      <body>
+        <div id="header">
+            <h1>Maxthon Operation</h1>
+        </div>
+        <div id="menu">
+            <h2>Online Domain</h2>
+            <ul>
+                {% block domainlist %}
+                {% endblock %}
+            </ul>
+        </div>
+        {% block content %}
+        {% endblock %}
+      </body>
+</html>

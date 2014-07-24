@@ -1,0 +1,24 @@
+<html>
+{% extends "base.html" %}
+    {% block domain_list %}
+        {% for domain in domain_list %}
+            <li><a href=/list_group/{{ domain }}>{{ domain }}</a></li>
+        {% endfor %}
+    {% endblock %}
+
+    {% block content %}
+    <table border="1" width="80%">
+        <td width="20%">HostName</td>
+        <td width="20%">W Ip</td>
+        <td width="20%">L Ip</td>
+        <td width="20%">Content</td>
+        {% for server in servers %}
+        <tr>
+            <td width="20%">{{ server.ServerName }}</td>
+            <td width="20%">{{ server.WlanIp }}</td>
+            <td width="20%">{{ server.LanIp }}</td>
+            <td width="20%">{{ server.Usefor }}</td>
+        <tr>
+        {% endfor %}
+    </table>
+    {% endblock %}

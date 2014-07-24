@@ -1,0 +1,18 @@
+<html>
+{% extends "base.html" %}
+    {% block content %}
+    <table border="1" width="80%">
+        <td width="20%">HostName</td>
+        <td width="20%">W Ip</td>
+        <td width="20%">L Ip</td>
+        <td width="20%">Content</td>
+        {% for proxy_server in proxy_servers %}
+        <tr>
+            <td width="20%">{{ proxy_server.ServerId.ServerName }}</td>
+            <td width="20%">{{ proxy_server.ServerId.WlanIp }}</td>
+            <td width="20%">{{ proxy_server.ServerId.LanIp }}</td>
+            <td width="20%">{{ proxy_server.ServerId.Usefor }}</td>
+        <tr>
+        {% endfor %}
+    </table>
+    {% endblock %}
